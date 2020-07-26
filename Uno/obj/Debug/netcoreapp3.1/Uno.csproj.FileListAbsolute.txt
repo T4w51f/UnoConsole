@@ -1,0 +1,13 @@
+D:\UnoCLI\Uno\Uno\bin\Debug\netcoreapp3.1\Uno.exe
+D:\UnoCLI\Uno\Uno\bin\Debug\netcoreapp3.1\Uno.deps.json
+D:\UnoCLI\Uno\Uno\bin\Debug\netcoreapp3.1\Uno.runtimeconfig.json
+D:\UnoCLI\Uno\Uno\bin\Debug\netcoreapp3.1\Uno.runtimeconfig.dev.json
+D:\UnoCLI\Uno\Uno\bin\Debug\netcoreapp3.1\Uno.dll
+D:\UnoCLI\Uno\Uno\bin\Debug\netcoreapp3.1\Uno.pdb
+D:\UnoCLI\Uno\Uno\obj\Debug\netcoreapp3.1\Uno.csprojAssemblyReference.cache
+D:\UnoCLI\Uno\Uno\obj\Debug\netcoreapp3.1\Uno.AssemblyInfoInputs.cache
+D:\UnoCLI\Uno\Uno\obj\Debug\netcoreapp3.1\Uno.AssemblyInfo.cs
+D:\UnoCLI\Uno\Uno\obj\Debug\netcoreapp3.1\Uno.csproj.CoreCompileInputs.cache
+D:\UnoCLI\Uno\Uno\obj\Debug\netcoreapp3.1\Uno.dll
+D:\UnoCLI\Uno\Uno\obj\Debug\netcoreapp3.1\Uno.pdb
+D:\UnoCLI\Uno\Uno\obj\Debug\netcoreapp3.1\Uno.genruntimeconfig.cache
