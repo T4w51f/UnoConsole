@@ -79,27 +79,30 @@ namespace Uno
                     }
                     else
                     {
-                        Console.WriteLine($"{player.name}'s hand: ");
-                        var hand = player.hand;
-                        var j = 0;
-                        foreach (var card in hand)
-                        {
-                            j++;
-                            Console.WriteLine($"[{j}. {card.Color.ToString()}, {card.Number.ToString()}]");
-                        }
-
                         bool isCardValid;
                         Card cardToPlay;
 
                         do
                         {
-                            Console.WriteLine("Pick a valid card: ");
-                            
-                            //TODO draw a card?
-                            //TODO play the drawn card?
-                            
+                            Console.WriteLine("Do you want to draw a card? [enter 'y' to draw a card]: ");
                             string userResponse = Console.ReadLine();
-                            cardToPlay = player.hand[int.Parse(userResponse ?? throw new Exception("Failed to parse user response")) - 1];
+
+                            if (userResponse != null && userResponse.Equals("y"))
+                            {
+                                ShowHand(player);
+
+                                //TODO play the drawn card?
+                                Console.WriteLine($"\n{player.name} drew a card");
+                                DrawCard(player, 1);
+                            }
+
+                            ShowHand(player);
+
+                            Console.WriteLine("Pick a card:");
+                            userResponse = Console.ReadLine();
+                            cardToPlay =
+                                player.hand[
+                                    int.Parse(userResponse ?? throw new Exception("Failed to parse user response")) - 1];
                             isCardValid = CheckCardValidity(cardToPlay);
                         } while (!isCardValid);
 
@@ -141,6 +144,7 @@ namespace Uno
                         // Find alternative for reverse
                         if (isReverse)
                         {
+                            // TODO FIXME: flawed if any power card is played
                             i -= 2;
                         }
                     }
@@ -151,6 +155,18 @@ namespace Uno
 
                     // TODO say Uno!
                 }
+            }
+        }
+
+        private void ShowHand(Player player)
+        {
+            Console.WriteLine($"{player.name}'s hand: ");
+            var hand = player.hand;
+            var j = 0;
+            foreach (var card in hand)
+            {
+                j++;
+                Console.Write($"[{j}. {card.Color.ToString()}, {card.Number.ToString()}]");
             }
         }
 
